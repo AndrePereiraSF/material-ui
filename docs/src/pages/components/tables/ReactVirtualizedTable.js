@@ -37,9 +37,7 @@ class MuiVirtualizedTable extends React.PureComponent {
   getRowClassName = ({ index }) => {
     const { classes, onRowClick } = this.props;
 
-    return clsx(classes.tableRow, classes.flexContainer, {
-      [classes.tableRowHover]: index !== -1 && onRowClick != null,
-    });
+    return clsx(classes.tableRow, classes.flexContainer, classes.tableRowHover);
   };
 
   cellRenderer = ({ cellData, columnIndex }) => {
